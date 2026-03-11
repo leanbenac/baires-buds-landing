@@ -1,0 +1,77 @@
+"use client"
+
+import Image from "next/image"
+import { Facebook, Instagram, MessageCircle } from "lucide-react"
+import { NAV_ITEMS, WHATSAPP_NUMBER } from "@/lib/data"
+
+interface FooterProps {
+  scrollToSection: (id: string) => void
+}
+
+export function Footer({ scrollToSection }: FooterProps) {
+  return (
+    <footer className="bg-[#0f1f3a] border-t border-[#00ffff]/20 py-12">
+      <div className="container mx-auto px-4">
+        <div className="grid md:grid-cols-3 gap-8 mb-8">
+          <div>
+            <Image
+              src="/baires-buds-logo.png"
+              alt="Baires Buds Logo"
+              width={120}
+              height={120}
+              className="mb-4"
+            />
+            <p className="text-white/70 text-sm">
+              Club de Cultivo de Cannabis Medicinal. Registrado en REPROCANN.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-bold text-lg mb-4 text-[#00ffff]">Enlaces Rápidos</h3>
+            <ul className="space-y-2">
+              {NAV_ITEMS.map((item) => (
+                <li key={item.id}>
+                  <button
+                    onClick={() => scrollToSection(item.id)}
+                    className="text-white/70 hover:text-[#00ffff] transition-colors text-sm cursor-pointer"
+                  >
+                    {item.label}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-bold text-lg mb-4 text-[#00ffff]">Redes Sociales</h3>
+            <div className="flex gap-4">
+              <button
+                className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#00ffff] transition-colors flex items-center justify-center cursor-pointer"
+                aria-label="Instagram"
+              >
+                <Instagram className="h-5 w-5" />
+              </button>
+              <button
+                className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#00ffff] transition-colors flex items-center justify-center cursor-pointer"
+                aria-label="Facebook"
+              >
+                <Facebook className="h-5 w-5" />
+              </button>
+              <button
+                className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#00ffff] transition-colors flex items-center justify-center cursor-pointer"
+                aria-label="WhatsApp"
+                onClick={() => window.open(`https://wa.me/${WHATSAPP_NUMBER}`, "_blank")}
+              >
+                <MessageCircle className="h-5 w-5" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-white/10 pt-8 text-center text-white/60 text-sm">
+          <p>© 2026 Baires Buds. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  )
+}
