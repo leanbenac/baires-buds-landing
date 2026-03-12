@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { Facebook, Instagram, MessageCircle } from "lucide-react"
+import { Instagram, MessageCircle } from "lucide-react"
 import { NAV_ITEMS, WHATSAPP_NUMBER } from "@/lib/data"
 
 interface FooterProps {
@@ -45,25 +45,24 @@ export function Footer({ scrollToSection }: FooterProps) {
           <div>
             <h3 className="font-bold text-lg mb-4 text-[#00ffff]">Redes Sociales</h3>
             <div className="flex gap-4">
-              <button
+              <a
+                href="https://www.instagram.com/bairesbudsclub"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#00ffff] transition-colors flex items-center justify-center cursor-pointer"
                 aria-label="Instagram"
               >
-                <Instagram className="h-5 w-5" />
-              </button>
-              <button
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#00ffff] transition-colors flex items-center justify-center cursor-pointer"
-                aria-label="Facebook"
-              >
-                <Facebook className="h-5 w-5" />
-              </button>
-              <button
+                <Instagram className="h-5 w-5 hover:text-[#0a1628]" />
+              </a>
+              <a
+                href={`https://wa.me/${WHATSAPP_NUMBER}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#00ffff] transition-colors flex items-center justify-center cursor-pointer"
                 aria-label="WhatsApp"
-                onClick={() => window.open(`https://wa.me/${WHATSAPP_NUMBER}`, "_blank")}
               >
-                <MessageCircle className="h-5 w-5" />
-              </button>
+                <MessageCircle className="h-5 w-5 hover:text-[#0a1628]" />
+              </a>
             </div>
           </div>
         </div>

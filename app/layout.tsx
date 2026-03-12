@@ -16,24 +16,11 @@ export const metadata: Metadata = {
   title: "Baires Buds - Cannabis Medicinal de Calidad Premium",
   description:
     "Club de cultivo de cannabis medicinal en Buenos Aires. Registrados en REPROCANN. Genéticas premium y asesoramiento personalizado.",
-  generator: "v0.app",
+  generator: "Baires Buds",
   keywords: ["cannabis medicinal", "REPROCANN", "cultivo cannabis", "Buenos Aires", "cannabis legal Argentina"],
   icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: "/apple-icon.png",
+    icon: "/icon.png",
+    apple: "/icon.png",
   },
 }
 

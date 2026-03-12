@@ -1,30 +1,21 @@
-# Baires Buds landing page
+# Baires Buds - Landing Page Oficial
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+Landing page moderna para **Baires Buds**, club de cultivo medicinal registrado en REPROCANN. 
+Desarrollada con **Next.js 19**, **Tailwind CSS** y **TypeScript**.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/leanbenacs-projects/v0-aires-buds-landing)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/uy17evUYxqa)
+## 🚀 Características
+- ✅ Diseño responsive (Mobile & Desktop).
+- ✅ Optimización de imágenes para carga rápida.
+- ✅ Formulario de contacto funcional.
+- ✅ Acceso directo a WhatsApp e Instagram.
 
-## Overview
+## 🛠️ Tecnologías
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/) (Animaciones)
+- [Vercel](https://vercel.com/) (Hosting)
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
-
-## Deployment
-
-Your project is live at:
-
-**[https://vercel.com/leanbenacs-projects/v0-aires-buds-landing](https://vercel.com/leanbenacs-projects/v0-aires-buds-landing)**
-
-## Build your app
-
-Continue building your app on:
-
-**[https://v0.app/chat/uy17evUYxqa](https://v0.app/chat/uy17evUYxqa)**
-
-## How It Works
-
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+## 📦 Instalación Local
+1. Clonar el repo.
+2. Ejecutar `npm install --legacy-peer-deps`.
+3. Correr con `npm run dev`.

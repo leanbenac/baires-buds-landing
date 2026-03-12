@@ -52,4 +52,4 @@ export const GALLERY_IMAGES = [
   "/cannabis-grow-room-professional.jpg",
 ]
 
-export const WHATSAPP_NUMBER = "5491112345678"
+export const WHATSAPP_NUMBER = "5491173692077"

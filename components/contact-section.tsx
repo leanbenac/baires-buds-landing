@@ -1,5 +1,7 @@
 "use client"
 
+import { useState, useRef } from "react"
+import emailjs from '@emailjs/browser'
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -10,85 +12,80 @@ interface ContactSectionProps {
 }
 
 export function ContactSection({ visibleElements }: ContactSectionProps) {
+  const [enviado, setEnviado] = useState(false)
+  const [cargando, setCargando] = useState(false)
+  const formRef = useRef<HTMLFormElement>(null)
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!formRef.current) return
+
+    setCargando(true)
+
+    try {
+      await emailjs.sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!, 
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!, 
+        formRef.current!, 
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
+
+      setEnviado(true)
+      formRef.current.reset()
+    } catch (error) {
+      console.error("Error al enviar:", error)
+      alert("No se pudo enviar el mensaje. Probá contactarnos por WhatsApp.")
+    } finally {
+      setCargando(false)
+    }
+  }
+
   return (
     <section id="contact" className="py-20 bg-[#0a1628]">
       <div className="container mx-auto px-4">
-        <h2
-          id="contact-title"
-          data-animate
-          className={`font-display text-5xl md:text-6xl font-bold text-center mb-12 text-[#00ffff] transition-all duration-700 ${
-            visibleElements.has("contact-title") ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-        >
+        <h2 className="font-display text-5xl md:text-6xl font-bold text-center mb-12 text-[#00ffff]">
           Contactanos
         </h2>
 
-        <div
-          id="contact-form"
-          data-animate
-          className={`max-w-2xl mx-auto transition-all duration-700 ${
-            visibleElements.has("contact-form") ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-        >
+        <div className="max-w-2xl mx-auto">
           <Card className="bg-white/5 border-[#00ffff]/30">
             <CardContent className="p-8">
-              <form className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-2 text-white/90">
-                    Nombre
-                  </label>
-                  <Input
-                    id="name"
-                    type="text"
-                    placeholder="Tu nombre"
-                    className="bg-white/10 border-[#00ffff]/30 text-white placeholder:text-white/50 focus:border-[#00ffff]"
-                  />
+              {enviado ? (
+                <div className="text-center py-10 space-y-4">
+                  <div className="text-5xl">🌿</div>
+                  <h3 className="text-[#00ffff] text-2xl font-bold font-display">¡Mensaje Recibido!</h3>
+                  <p className="text-white/80">Gracias por contactar a Baires Buds. Te responderemos pronto.</p>
+                  <Button variant="outline" className="border-[#00ffff] text-[#00ffff]" onClick={() => setEnviado(false)}>
+                    Enviar otro mensaje
+                  </Button>
                 </div>
+              ) : (
+                <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+                  <div>
+                    <label className="block text-sm font-medium mb-2 text-white/90">Nombre</label>
+                    <Input name="user_name" required placeholder="Tu nombre" className="bg-white/10 border-[#00ffff]/30 text-white" />
+                  </div>
 
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2 text-white/90">
-                    Email
-                  </label>
-                  <Input
-                    id="email"
-                    type="email"
-                    placeholder="tu@email.com"
-                    className="bg-white/10 border-[#00ffff]/30 text-white placeholder:text-white/50 focus:border-[#00ffff]"
-                  />
-                </div>
+                  <div>
+                    <label className="block text-sm font-medium mb-2 text-white/90">Email</label>
+                    <Input name="user_email" type="email" required placeholder="tu@email.com" className="bg-white/10 border-[#00ffff]/30 text-white" />
+                  </div>
 
-                <div>
-                  <label htmlFor="whatsapp" className="block text-sm font-medium mb-2 text-white/90">
-                    WhatsApp
-                  </label>
-                  <Input
-                    id="whatsapp"
-                    type="tel"
-                    placeholder="+54 9 11 1234-5678"
-                    className="bg-white/10 border-[#00ffff]/30 text-white placeholder:text-white/50 focus:border-[#00ffff]"
-                  />
-                </div>
+                  <div>
+                    <label className="block text-sm font-medium mb-2 text-white/90">WhatsApp</label>
+                    <Input name="user_phone" required placeholder="+54 9 11 ..." className="bg-white/10 border-[#00ffff]/30 text-white" />
+                  </div>
 
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-2 text-white/90">
-                    Mensaje
-                  </label>
-                  <Textarea
-                    id="message"
-                    placeholder="Contanos sobre tu interés en nuestro club..."
-                    rows={5}
-                    className="bg-white/10 border-[#00ffff]/30 text-white placeholder:text-white/50 focus:border-[#00ffff]"
-                  />
-                </div>
+                  <div>
+                    <label className="block text-sm font-medium mb-2 text-white/90">Mensaje</label>
+                    <Textarea name="message" required placeholder="Contanos sobre tu interés..." rows={5} className="bg-white/10 border-[#00ffff]/30 text-white" />
+                  </div>
 
-                <Button
-                  type="submit"
-                  size="lg"
-                  className="w-full bg-[#00ffff] text-[#0a1628] hover:bg-[#00ffff]/90 text-lg font-bold cursor-pointer"
-                >
-                  Enviar Mensaje
-                </Button>
-              </form>
+                  <Button type="submit" disabled={cargando} className="w-full bg-[#00ffff] text-[#0a1628] font-bold">
+                    {cargando ? "Enviando..." : "Enviar Mensaje"}
+                  </Button>
+                </form>
+              )}
             </CardContent>
           </Card>
         </div>
