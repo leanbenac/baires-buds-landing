@@ -69,7 +69,7 @@ export function Footer({ scrollToSection }: FooterProps) {
               
               <div className="flex items-center">
                 <Image 
-                  src="/ministerio-salud.PNG" 
+                  src="/ministerio-salud.png" 
                   alt="Ministerio de Salud Argentina" 
                   width={130} 
                   height={45} 
@@ -79,7 +79,7 @@ export function Footer({ scrollToSection }: FooterProps) {
               
               <div className="flex items-center">
                 <Image 
-                  src="/reprocan.PNG" 
+                  src="/reprocan.png" 
                   alt="Registro REPROCANN" 
                   width={90} 
                   height={45} 
@@ -89,7 +89,7 @@ export function Footer({ scrollToSection }: FooterProps) {
               
               <div className="flex items-center -ml-2 -mt-2"> 
                 <Image 
-                  src="/fecca.PNG" 
+                  src="/fecca.png" 
                   alt="FECCA" 
                   width={60} 
                   height={60} 
