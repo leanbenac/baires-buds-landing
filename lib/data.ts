@@ -45,11 +45,11 @@ export const STRAINS = [
 ]
 
 export const GALLERY_IMAGES = [
-  "/premium-cannabis-bud-macro-photography.jpg",
-  "/cannabis-cultivation-facility-modern.jpg",
-  "/cannabis-plant-close-up-trichomes.jpg",
-  "/medical-cannabis-flowering-stage.jpg",
-  "/cannabis-grow-room-professional.jpg",
+  "/cultivo-0.jpeg",
+  "/cultivo-1.jpeg",
+  "/cultivo-2.jpeg",
+  "/cultivo-3.jpeg",
+  "/cultivo-4.jpeg",
 ]
 
 export const WHATSAPP_NUMBER = "5491173692077"

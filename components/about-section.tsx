@@ -21,7 +21,7 @@ const ABOUT_CARDS = [
     icon: Shield,
     title: "Marco Legal",
     description:
-      "Cumplimiento estricto de las normativas de REPROCANN, brindando seguridad juridica total a todos nuestros socios.",
+      "Marco regulatorio de la Ley N° 27.350 para la investigación, uso medicinal y terapéutico del cannabis y sus derivados.",
     delay: "delay-100",
   },
   {

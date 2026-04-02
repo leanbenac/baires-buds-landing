@@ -44,29 +44,61 @@ export function Footer({ scrollToSection }: FooterProps) {
 
           <div>
             <h3 className="font-bold text-lg mb-4 text-[#00ffff]">Redes Sociales</h3>
-            <div className="flex gap-4">
+            <div className="flex gap-4 mb-8">
               <a
                 href="https://www.instagram.com/bairesbudsclub"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#00ffff] transition-colors flex items-center justify-center cursor-pointer"
+                className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#00ffff] transition-colors flex items-center justify-center cursor-pointer group"
                 aria-label="Instagram"
               >
-                <Instagram className="h-5 w-5 hover:text-[#0a1628]" />
+                <Instagram className="h-5 w-5 text-white group-hover:text-[#0a1628]" />
               </a>
               <a
                 href={`https://wa.me/${WHATSAPP_NUMBER}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#00ffff] transition-colors flex items-center justify-center cursor-pointer"
+                className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#00ffff] transition-colors flex items-center justify-center cursor-pointer group"
                 aria-label="WhatsApp"
               >
-                <MessageCircle className="h-5 w-5 hover:text-[#0a1628]" />
+                <MessageCircle className="h-5 w-5 text-white group-hover:text-[#0a1628]" />
               </a>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-4 mt-18"> 
+              
+              <div className="flex items-center">
+                <Image 
+                  src="/ministerio-salud.PNG" 
+                  alt="Ministerio de Salud Argentina" 
+                  width={130} 
+                  height={45} 
+                  className="object-contain brightness-125 opacity-90 hover:opacity-100 transition-opacity" 
+                />
+              </div>
+              
+              <div className="flex items-center">
+                <Image 
+                  src="/reprocan.PNG" 
+                  alt="Registro REPROCANN" 
+                  width={90} 
+                  height={45} 
+                  className="object-contain brightness-0 invert opacity-80 hover:opacity-100 transition-opacity" 
+                />
+              </div>
+              
+              <div className="flex items-center -ml-2 -mt-2"> 
+                <Image 
+                  src="/fecca.PNG" 
+                  alt="FECCA" 
+                  width={60} 
+                  height={60} 
+                  className="object-contain brightness-0 invert opacity-80 hover:opacity-100 transition-opacity" 
+                />
+              </div>
             </div>
           </div>
         </div>
-
         <div className="border-t border-white/10 pt-8 text-center text-white/60 text-sm">
           <p>© 2026 Baires Buds. Todos los derechos reservados.</p>
         </div>

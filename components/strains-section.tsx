@@ -63,15 +63,6 @@ export function StrainsSection({ visibleElements }: StrainsSectionProps) {
             visibleElements.has("catalog-button") ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <a href="/catalogo-baires-buds.pdf" download>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-[#00ffff] text-[#00ffff] hover:bg-[#00ffff] hover:text-[#0a1628] text-lg px-8 py-6 bg-transparent cursor-pointer"
-            >
-              Descargar Catálogo Completo (PDF)
-            </Button>
-          </a>
         </div>
       </div>
     </section>
