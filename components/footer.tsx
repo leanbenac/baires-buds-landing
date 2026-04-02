@@ -89,7 +89,7 @@ export function Footer({ scrollToSection }: FooterProps) {
               
               <div className="flex items-center -ml-2 -mt-2"> 
                 <Image 
-                  src="/fecca.png" 
+                  src="/fecca-icon.png" 
                   alt="FECCA" 
                   width={60} 
                   height={60} 
