@@ -12,8 +12,7 @@ interface HeroSectionProps {
 
 export function HeroSection({ scrolled, scrollToSection }: HeroSectionProps) {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      
+    <section id="hero" className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <div
           className="absolute inset-0 bg-gradient-to-b from-[#00ffff]/20 to-transparent"
@@ -25,7 +24,7 @@ export function HeroSection({ scrolled, scrollToSection }: HeroSectionProps) {
         <div className="absolute inset-0 bg-[url('/cannabis-leaves-pattern-dark.jpg')] bg-cover bg-center opacity-10" />
       </div>
 
-      <div className="container mx-auto px-4 text-center z-10 mt-20">
+      <div className="container mx-auto px-4 text-center z-10 mt-12 md:mt-20">
         <div className="animate-fade-in-up">
 
           <div className="mb-8 inline-block">
@@ -55,7 +54,7 @@ export function HeroSection({ scrolled, scrollToSection }: HeroSectionProps) {
 
           <Button
             size="lg"
-            className="relative bg-[#00ffff] text-[#0a1628] hover:bg-[#00ffff]/90 text-lg px-8 py-6 font-bold mb-14 cursor-pointer transition-all duration-300 hover:shadow-[0_0_25px_rgba(0,255,255,0.5)]"
+            className="relative bg-[#00ffff] text-[#0a1628] hover:bg-[#00ffff]/90 text-base md:text-lg px-6 md:px-8 py-4 md:py-6 font-bold mb-10 md:mb-12 cursor-pointer transition-all duration-300 hover:shadow-[0_0_25px_rgba(0,255,255,0.5)]"
             onClick={() => window.open(`https://wa.me/${WHATSAPP_NUMBER}`, "_blank")}
           >
             <MessageCircle className="mr-2 h-5 w-5" />

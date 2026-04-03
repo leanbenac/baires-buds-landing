@@ -21,7 +21,7 @@ export function StrainsSection({ visibleElements }: StrainsSectionProps) {
             visibleElements.has("strains-title") ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          Nuestros Productos
+          Productos Destacados
         </h2>
 
         <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-7xl mx-auto mb-12">
