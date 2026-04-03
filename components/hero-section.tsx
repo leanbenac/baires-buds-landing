@@ -27,7 +27,7 @@ export function HeroSection({ scrolled, scrollToSection }: HeroSectionProps) {
       <div className="container mx-auto px-4 text-center z-10 mt-12 md:mt-20">
         <div className="animate-fade-in-up">
 
-          <div className="mb-8 inline-block">
+          <div className="mb-12 inline-block">
             <Image
               src="/baires-buds-logo.png"
               alt="Baires Buds Logo"
