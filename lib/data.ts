@@ -1,7 +1,7 @@
 export const NAV_ITEMS = [
   { id: "hero", label: "Inicio" },
   { id: "about", label: "Sobre Nosotros" },
-  { id: "strains", label: "Cepas" },
+  { id: "strains", label: "Productos" },
   { id: "gallery", label: "Galería" },
   { id: "contact", label: "Contacto" },
 ]
@@ -11,38 +11,38 @@ export const STRAINS = [
     name: "Fancy Gummy",
     type: "50% Indica / 50% Sativa",
     thc: "25%",
-    description: "Notas cítricas con final a cookies/bizcocho. Relajación corporal profunda y euforia mental.",
-    image: "/fancy-gummy-cannabis-strain-purple-buds.jpg",
+    description: "Notas cítricas y dulces.\nRelajación profunda y euforia.",
+    image: "/fancy-gummt-cannabis-strain.jpg",
   },
   {
     name: "Nucleo Uno",
     type: "40% Indica / 60% Sativa",
     thc: "17-25%",
-    description: "Cítrico, fresco, madera, dulce. Relajación corporal profunda y euforia mental.",
+    description: "Perfil cítrico y fresco.\nRelajación corporal y euforia.",
     image: "/nucleo-uno-cannabis-strain.jpg",
   },
   {
     name: "Mesias",
     type: "50% Indica / 50% Sativa",
     thc: "17.9%",
-    description: "Caramelo, fizz uva. Euforia y creatividad.",
-    image: "/mesias-cannabis-strain.jpg",
+    description: "Notas dulces y frutales.\nEuforia y creatividad.",
+    image: "/pineapple-og-cannabis-strain-orange-hairs.jpg",
   },
   {
-    name: "Bateku",
-    type: "40% Indica / 60% Sativa",
-    thc: "15%",
-    description: "Cítrico con notas tropicales. Eufórico, mental e inspirador.",
-    image: "/bateku-cannabis-strain.jpg",
+    name: "Gomita de Cannabis",
+    type: "Quimiotipo II (Balanceado)",
+    thc: "1:1 THC/CBD",
+    description: "Balance THC/CBD 1:1.\nEfecto equilibrado y funcional.",
+    image: "/gummy-cannabis-strain-purple-buds.jpg",
   },
   {
-    name: "Satelite",
-    type: "60% Indica / 40% Sativa",
-    thc: "25%",
-    description: "Aromas complejos con notas incensadas y cítricas. Potente y cerebral, ideal para tolerancia alta.",
-    image: "/satelite-cannabis-strain.jpg",
+    name: "Extracto Hash",
+    type: "Concentrado Premium",
+    thc: "Alta Potencia",
+    description: "Extracción artesanal.\nAromas intensos y textura premium.",
+    image: "/hash-baires-buds.png",
   },
-]
+];
 
 export const GALLERY_IMAGES = [
   "/cultivo-0.jpeg",

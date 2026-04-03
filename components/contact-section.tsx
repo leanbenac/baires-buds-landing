@@ -43,7 +43,7 @@ export function ContactSection({ visibleElements }: ContactSectionProps) {
   return (
     <section id="contact" className="py-20 bg-[#0a1628]">
       <div className="container mx-auto px-4">
-        <h2 className="font-display text-5xl md:text-6xl font-bold text-center mb-12 text-[#00ffff]">
+        <h2 className="font-display text-4xl md:text-5xl font-bold text-center mb-12 text-[#00ffff]">
           Contactanos
         </h2>
 

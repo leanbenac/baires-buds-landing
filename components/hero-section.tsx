@@ -13,6 +13,7 @@ interface HeroSectionProps {
 export function HeroSection({ scrolled, scrollToSection }: HeroSectionProps) {
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      
       <div className="absolute inset-0 z-0">
         <div
           className="absolute inset-0 bg-gradient-to-b from-[#00ffff]/20 to-transparent"
@@ -26,6 +27,7 @@ export function HeroSection({ scrolled, scrollToSection }: HeroSectionProps) {
 
       <div className="container mx-auto px-4 text-center z-10 mt-20">
         <div className="animate-fade-in-up">
+
           <div className="mb-8 inline-block">
             <Image
               src="/baires-buds-logo.png"
@@ -36,15 +38,24 @@ export function HeroSection({ scrolled, scrollToSection }: HeroSectionProps) {
               priority
             />
           </div>
+
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-balance">
-            Cannabis Medicinal de Calidad Premium
+            Cannabis Medicinal Premium
           </h2>
-          <p className="text-xl md:text-2xl text-white/80 mb-8 text-balance max-w-2xl mx-auto">
-            Club de Cultivo Registrado en REPROCANN
-          </p>
+
+          <div className="mb-8 space-y-2">
+            <p className="text-xl md:text-2xl text-white/80 text-balance max-w-2xl mx-auto">
+              Club de Cultivo Registrado en REPROCANN
+            </p>
+
+            <p className="text-sm md:text-base text-[#00ffff]/80 tracking-wide">
+              Marco regulatorio del Ministerio de Salud de la Nación
+            </p>
+          </div>
+
           <Button
             size="lg"
-            className="bg-[#00ffff] text-[#0a1628] hover:bg-[#00ffff]/90 text-lg px-8 py-6 font-bold mb-12 cursor-pointer"
+            className="relative bg-[#00ffff] text-[#0a1628] hover:bg-[#00ffff]/90 text-lg px-8 py-6 font-bold mb-14 cursor-pointer transition-all duration-300 hover:shadow-[0_0_25px_rgba(0,255,255,0.5)]"
             onClick={() => window.open(`https://wa.me/${WHATSAPP_NUMBER}`, "_blank")}
           >
             <MessageCircle className="mr-2 h-5 w-5" />

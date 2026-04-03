@@ -41,7 +41,7 @@ export function AboutSection({ visibleElements }: AboutSectionProps) {
         <h2
           id="about-title"
           data-animate
-          className={`font-display text-5xl md:text-6xl font-bold text-center mb-12 text-[#00ffff] transition-all duration-700 ${
+          className={`font-display text-4xl md:text-5xl font-bold text-center mb-12 text-[#00ffff] transition-all duration-700 ${
             visibleElements.has("about-title") ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
