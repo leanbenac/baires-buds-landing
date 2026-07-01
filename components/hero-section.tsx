@@ -38,9 +38,9 @@ export function HeroSection({ scrolled, scrollToSection }: HeroSectionProps) {
             />
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-balance">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 text-balance">
             Cannabis Medicinal Premium
-          </h2>
+          </h1>
 
           <div className="mb-8 space-y-2">
             <p className="text-xl md:text-2xl text-white/80 text-balance max-w-2xl mx-auto">

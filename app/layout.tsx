@@ -13,11 +13,24 @@ const _permanentMarker = Permanent_Marker({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.bairesbuds.com.ar"),
   title: "Baires Buds - Cannabis Medicinal de Calidad Premium",
   description:
     "Club de cultivo de cannabis medicinal en Buenos Aires. Registrados en REPROCANN. Genéticas premium y asesoramiento personalizado.",
   generator: "Baires Buds",
   keywords: ["cannabis medicinal", "REPROCANN", "cultivo cannabis", "Buenos Aires", "cannabis legal Argentina"],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Baires Buds - Cannabis Medicinal de Calidad Premium",
+    description:
+      "Club de cultivo de cannabis medicinal en Buenos Aires. Registrados en REPROCANN. Genéticas premium y asesoramiento personalizado.",
+    url: "https://www.bairesbuds.com.ar",
+    siteName: "Baires Buds",
+    locale: "es_AR",
+    type: "website",
+  },
   icons: {
     icon: "/icon.png",
     apple: "/icon.png",
