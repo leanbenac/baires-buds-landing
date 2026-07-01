@@ -30,6 +30,14 @@ export const metadata: Metadata = {
     siteName: "Baires Buds",
     locale: "es_AR",
     type: "website",
+    images: [
+      {
+        url: "/baires-buds-logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Baires Buds Logo",
+      },
+    ],
   },
   icons: {
     icon: "/icon.png",
